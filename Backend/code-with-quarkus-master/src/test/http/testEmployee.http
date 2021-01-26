@@ -1,0 +1,26 @@
+POST http://localhost:8080/api/employee/addEmployee
+Content-Type: application/json
+
+{
+  "firstName": "Max",
+  "lastName": "Musterangestellter",
+  "dateOfBirth": "2000-08-23",
+  "salary": 4330.00
+}
+
+###
+
+GET http://localhost:8080/api/employee/getEmployees
+
+###
+
+PUT http://localhost:8080/api/employee/1/updateSalary
+Content-Type: application/json
+
+{
+  "salary": 200
+}
+
+###
+
+DELETE http://localhost:8080/api/employee/1/deleteEmployee

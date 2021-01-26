@@ -1,0 +1,34 @@
+POST http://localhost:8080/api/Store/addStore
+Content-Type: application/json
+
+{
+  "locationId": 2,
+  "name": "Nike Store"
+}
+
+
+###
+
+GET http://localhost:8080/api/Store/getStores
+
+###
+
+
+POST http://localhost:8080/api/Store/addBill
+Content-Type: application/json
+
+{
+  "customerId": 1,
+  "storeId": 1,
+  "date": "2020-03-21",
+  "productId": 1
+}
+
+###
+
+GET http://localhost:8080/api/Store/1/getStore
+
+###
+
+DELETE http://localhost:8080/api/Store/1/deleteStore
+

@@ -1,0 +1,19 @@
+POST http://localhost:8080/api/product/addProduct
+Content-Type: application/json
+
+{
+  "name": "Laufschuh",
+  "price": 30.00
+}
+
+###
+
+GET http://localhost:8080/api/product/getProducts
+
+###
+
+GET http://localhost:8080/api/product/1/getProduct
+
+###
+
+DELETE http://localhost:8080/api/product/1/deleteProduct

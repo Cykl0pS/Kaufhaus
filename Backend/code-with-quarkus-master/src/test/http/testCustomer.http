@@ -1,0 +1,24 @@
+POST http://localhost:8080/api/customer/addCustomer
+Content-Type: application/json
+
+{
+  "dateOfBirth": "2003-08-26",
+  "firstName": "Max",
+  "lastName": "Mustermann",
+  "address": "Musterstrasse 9",
+  "zipCode": 4030
+}
+###
+
+GET http://localhost:8080/api/customer/getCustomers
+
+###
+
+GET http://localhost:8080/api/customer/1/getCustomer
+
+###
+
+DELETE http://localhost:8080/api/customer/1/deleteCustomer
+
+
+

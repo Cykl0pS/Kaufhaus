@@ -1,0 +1,17 @@
+POST http://localhost:8080/api/delivery/addDelivery
+Content-Type: application/json
+
+{
+  "count": 20,
+  "date": "2021-01-24",
+  "warehouseId": 1,
+  "productId": 1
+}
+
+###
+
+GET http://localhost:8080/api/delivery/getDeliveries
+
+###
+
+GET http://localhost:8080/api/delivery/1/getDelivery
