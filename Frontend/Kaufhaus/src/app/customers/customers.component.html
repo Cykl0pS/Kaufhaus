@@ -1,0 +1,58 @@
+<p>Customer!</p>
+<body>
+<div class="content">
+    <div class="wrapper">
+      <div class="material-textfield">
+        <input
+          type="dataInput"
+          placeholder="Vorname"
+          [(ngModel)]="formCustomer.firstName"
+        />
+      </div>
+      <div class="material-textfield">
+        <input
+          type="dataInput"
+          placeholder="Nachname"
+          [(ngModel)]="formCustomer.lastName"
+        />
+      </div>
+      <div class="material-textfield">
+        <input
+          type="dataInput"
+          placeholder="Geburtstag"
+          [(ngModel)]="formCustomer.dateOfBirth"
+        />
+      </div>
+      <div class="material-textfield">
+        <input
+          type="dataInput"
+          placeholder="Adresse"
+          [(ngModel)]="formCustomer.address"
+        />
+      </div>
+      <div class="material-textfield">
+          <input
+            type="dataInput"
+            placeholder="Postleitzahl"
+            [(ngModel)]="formCustomer.zipCode"
+          />
+        </div>
+    </div>   
+    <div class="container">
+      <a href="#" (click)="addCustomer()" class="button2">Add</a>
+      <a href="#" (click)="clearCustomer()" class="button2">Clear</a>
+    </div>
+    <table class="table">
+      <tr *ngFor="let customer of customers; let i = index" (click)="selectCustomer(customer)" 
+      (mouseover)="actCustomer = customer.id"
+      [style.background-color]=getColor(customer.id)>
+        <td><img src="/assets/images/delete_icon.png" style="width: 15px; height: 15px;" (click)="deleteCustomer(customer,customer.id)"> {{ customer.id }}</td>
+        <td>{{ customer.firstName }}</td>
+        <td>{{ customer.lastName }}</td>
+        <td>{{ customer.dateOfBirth }}</td>
+        <td>{{ customer.address }}</td>
+        <td>{{ customer.zipCode }}</td>
+      </tr>
+    </table>
+  </div>
+</body>

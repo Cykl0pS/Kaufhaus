@@ -1,0 +1,25 @@
+<p>Store!</p>
+<body>
+    <div class="content">
+        <div class="wrapper">
+          <div class="material-textfield">
+            <input
+              type="dataInput"
+              placeholder="Name"
+              [(ngModel)]="formStore.name"
+            />
+          </div>
+        </div>   
+        <div class="container">
+          <a href="#" (click)="addStore()" class="button2">Add</a>
+          <a href="#" (click)="clearStore()" class="button2">Clear</a>
+        </div>
+      
+        <table class="table">
+          <tr *ngFor="let store of stores; let i = index">
+            <td><img src="/assets/images/delete_icon.png" style="width: 15px; height: 15px;" (click)="deleteStore(store,store.id)"> {{ store.id }}</td>
+            <td>{{ store.name }}</td>
+          </tr>
+        </table>
+      </div>
+    </body>

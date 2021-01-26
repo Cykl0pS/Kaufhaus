@@ -1,0 +1,51 @@
+<p>Employee!</p>
+<body>
+    <div class="content">
+        <div class="wrapper">
+          <div class="material-textfield">
+            <input
+              type="dataInput"
+              placeholder="Vorname"
+              [(ngModel)]="formEmployee.firstName"
+            />
+          </div>
+          <div class="material-textfield">
+            <input
+              type="dataInput"
+              placeholder="Nachname"
+              [(ngModel)]="formEmployee.lastName"
+            />
+          </div>
+          <div class="material-textfield">
+            <input
+              type="dataInput"
+              placeholder="Geburtstag"
+              [(ngModel)]="formEmployee.dateOfBirth"
+            />
+          </div>
+          <div class="material-textfield">
+            <input
+              type="dataInput"
+              placeholder="Salary"
+              [(ngModel)]="formEmployee.salary"
+            />
+          </div>
+        </div>   
+        <div class="container">
+          <a href="#" (click)="addEmployee()" class="button2">Add</a>
+          <a href="#" (click)="clearEmployee()" class="button2">Clear</a>
+        </div>
+      
+        <table class="table">
+          <tr *ngFor="let employee of employees; let i = index" (click)="selectEmployee(employee)"
+          (mouseover)="actEmployee = employee.id"
+          [style.background-color]=getColor(employee.id)>
+            <td><img src="/assets/images/delete_icon.png" style="width: 15px; height: 15px;" (click)="deleteEmployee(employee,employee.id)"> {{ employee.id }}</td>
+            <td>{{ employee.firstName }}</td>
+            <td>{{ employee.lastName }}</td>
+            <td>{{ employee.dateOfBirth }}</td>
+            <td>{{ employee.salary }}</td>
+          </tr>
+        </table>
+      </div>
+    </body>

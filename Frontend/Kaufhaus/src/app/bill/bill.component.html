@@ -1,0 +1,56 @@
+<p>Bill!</p>
+<body>
+    <div class="content">
+        <div class="wrapper">
+          <div class="material-textfield">
+            <input
+              type="dataInput"
+              placeholder="Bill Date"
+              [(ngModel)]="formBill.billId"
+            />
+          </div>
+          <div class="material-textfield">
+            <input
+              type="dataInput"
+              placeholder="Preis"
+              [(ngModel)]="formBill.date"
+            />
+          </div>
+          <div class="material-textfield">
+            <input
+              type="dataInput"
+              placeholder="Produkt"
+              [(ngModel)]="formBill.customerId"
+            />
+          </div>
+          <div class="material-textfield">
+            <input
+              type="dataInput"
+              placeholder="Produkt"
+              [(ngModel)]="formBill.storeId"
+            />
+          </div>
+          <div class="material-textfield">
+            <input
+              type="dataInput"
+              placeholder="Produkt"
+              [(ngModel)]="formBill.productId"
+            />
+          </div>
+        </div>   
+        <div class="container">
+          <a href="#" (click)="addBill()" class="button2">Add</a>
+          <a href="#" (click)="clearBill()" class="button2">Clear</a>
+        </div>
+      
+        <table class="table">
+          <tr *ngFor="let bill of bills; let i = index">
+            <td>{{ bill.billId }}</td>
+            <td>{{ bill.date }}</td>
+            <td>{{ bill.customerId }}</td>
+            <td>{{ bill.storeId }}</td>
+            <td>{{ bill.productId }}</td>
+          </tr>
+        </table>
+      </div>
+    </body>

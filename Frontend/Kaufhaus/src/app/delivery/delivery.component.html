@@ -1,0 +1,49 @@
+<p>Delivery!</p>
+<body>
+    <div class="content">
+        <div class="wrapper">
+          <div class="material-textfield">
+            <input
+              type="dataInput"
+              placeholder="Anzahl"
+              [(ngModel)]="formDelivery.count"
+            />
+          </div>
+          <div class="material-textfield">
+            <input
+              type="dataInput"
+              placeholder="Datum"
+              [(ngModel)]="formDelivery.date"
+            />
+          </div>
+          <div class="material-textfield">
+            <input
+              type="dataInput"
+              placeholder="ProduktId"
+              [(ngModel)]="formDelivery.productId"
+            />
+          </div>
+          <div class="material-textfield">
+            <input
+              type="dataInput"
+              placeholder="WarenhausId"
+              [(ngModel)]="formDelivery.warehouseId"
+            />
+          </div>
+        </div>   
+        <div class="container">
+          <a href="#" (click)="addDelivery()" class="button2">Add</a>
+          <a href="#" (click)="clearDelivery()" class="button2">Clear</a>
+        </div>
+      
+        <table class="table">
+          <tr *ngFor="let delivery of deliveries; let i = index">
+            <td>{{ delivery.id }}</td>
+            <td>{{ delivery.count }}</td>
+            <td>{{ delivery.date }}</td>
+            <td>{{ delivery.productId }}</td>
+            <td>{{ delivery.warehouseId }}</td>
+          </tr>
+        </table>
+      </div>
+    </body>

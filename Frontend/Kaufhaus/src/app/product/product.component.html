@@ -1,0 +1,33 @@
+<p>Product!</p>
+<body>
+  <div class="content">
+      <div class="wrapper">
+        <div class="material-textfield">
+          <input
+            type="dataInput"
+            placeholder="Name"
+            [(ngModel)]="formProduct.name"
+          />
+        </div>
+        <div class="material-textfield">
+          <input
+            type="dataInput"
+            placeholder="Preis"
+            [(ngModel)]="formProduct.price"
+          />
+        </div>
+      </div>   
+      <div class="container">
+        <a href="#" (click)="addProduct()" class="button2">Add</a>
+        <a href="#" (click)="clearProduct()" class="button2">Clear</a>
+      </div>
+    
+      <table class="table">
+        <tr *ngFor="let product of products; let i = index">
+          <td><img src="/assets/images/delete_icon.png" style="width: 15px; height: 15px;" (click)="deleteProduct(product,product.id)"> {{ product.id }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.price }}</td>
+        </tr>
+      </table>
+    </div>
+  </body>

@@ -1,0 +1,137 @@
+.content {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #ffffff;
+    padding: 10px;
+  }
+  
+  html,
+  body {
+    background-color: #2c2c2c !important;
+    color: #ffffff;
+    font-family: "Terminus", monospace;
+  }
+  
+  .table {
+      width: 1000px;
+      table-layout: fixed;
+      border-collapse: collapse;
+      justify-content: space-between;
+      flex-direction: column;
+      border: 1px solid #ffffff;
+      background-color: #2c2c2c;
+  }
+    .table tr {
+        flex: 1 0;
+        max-width: 100%;
+        width: 1000px;
+        display: flex;
+    }
+  
+    .table tr th, 
+    .table tr td {
+      padding: 5px;
+      width: 1000px;
+      text-align: left;
+      margin: auto;
+    }
+  
+  a.button2{
+    display:inline-block;
+    padding:0.5em 1.5em;
+    border:0.16em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    font-size: 10pt;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.15s;
+    }
+  a.button2:hover{
+    color:#DDDDDD;
+    border-color:#DDDDDD;
+  }
+  a.button2:active{
+    color:#BBBBBB;
+    border-color:#BBBBBB;
+    }
+  @media all and (max-width:30em){
+    a.button2{
+      display:block;
+      margin:0.4em auto;
+    }
+  }
+  
+  input {
+      outline: none;
+  }
+  input[type=search] {
+      -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+      font-family: inherit;
+    font-size: 100%;
+    color: #ffffff;
+  }
+  input::-webkit-search-decoration,
+  input::-webkit-search-cancel-button {
+      display: none; 
+  }
+  
+  
+  input[type=search] {
+      background: #2c2c2c url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+      border: solid 1px #ffffff;
+      padding: 9px 10px 9px 32px;
+      width: 55px;
+      
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      transition: all .5s;
+  }
+  input[type=search]:focus {
+      width: 130px;
+      background-color: #2c2c2c;
+      border-color: #ffffff;
+      
+      -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+      -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+      box-shadow: 0 0 5px rgba(109,207,246,.5);
+  }
+  
+  @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+  .wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+  }
+  
+  .material-textfield {
+    height: 4rem;
+    padding-top: 0.5rem;
+    width: 250px;
+  }
+  .material-textfield > input {
+    background: none;
+    border: none;
+    box-sizing: border-box;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    padding: 0.25rem 0.1rem;
+    width: 100%;
+  }
+  .material-textfield > input:invalid {
+    box-shadow: none;
+  }
+  .material-textfield > input:focus {
+    outline: none;
+  }
+  
+  .material-textfield input {
+    border-bottom: 0.1rem solid #ffffff;
+    color: #ffffff;
+  }
